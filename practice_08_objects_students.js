@@ -100,10 +100,9 @@ console.log("Watched:", movie.watched);
 function findByName(students, targetName) {
   // TODO: use .find() to search by name
   // Hint: .find() returns undefined if nothing matches — convert that to null using || (or) operator
-  students = {};
-  targetName = students.find(students.name);
-}
 
+  return students.find((students) => students.name === targetName || null);
+}
 // Test your function — uncomment when ready:
 console.log("\n--- Problem 3 ---");
 console.log(findByName(students, "ChenZee"));
@@ -126,6 +125,9 @@ console.log(findByName(students, "Marcus"));
 function printRoster(students) {
   // TODO: loop through students with .forEach()
   // TODO: print each student in the format above
+  return students.forEach(
+    students,
+  )`[Grade ${students.grade}] ${students.name} - GPA: ${students.gpa} ${students.isHonors}`;
 }
 
 // Test your function — uncomment when ready:
