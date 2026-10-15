@@ -125,14 +125,26 @@ console.log(findByName(students, "Marcus"));
 function printRoster(students) {
   // TODO: loop through students with .forEach()
   // TODO: print each student in the format above
-  return students.forEach(
-    students,
-  )`[Grade ${students.grade}] ${students.name} - GPA: ${students.gpa} ${students.isHonors}`;
+
+  // students.forEach(function (students) {
+  //   console.log(
+  //     `[Grade ${students.grade}] ${students.name} - GPA: ${students.gpa} `,
+  //   );
+  // });
+  let star = "";
+  if (students.forEach((students.isHonors = true))) {
+    star = "★";
+  } else star = "";
+  students.forEach((students) =>
+    console.log(
+      `[Grade ${students.grade}] ${students.name} - GPA: ${students.gpa} ${star}`,
+    ),
+  );
 }
 
 // Test your function — uncomment when ready:
-// console.log("\n--- Problem 4 ---");
-// printRoster(students);
+console.log("\n--- Problem 4 ---");
+printRoster(students);
 
 // =================================================================
 // PROBLEM 5 — Object Inspector
