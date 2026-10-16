@@ -126,22 +126,17 @@ function printRoster(students) {
   // TODO: loop through students with .forEach()
   // TODO: print each student in the format above
 
-  // students.forEach(function (students) {
-  //   console.log(
-  //     `[Grade ${students.grade}] ${students.name} - GPA: ${students.gpa} `,
-  //   );
-  // });
-  let star = "";
-  if (students.forEach((students.isHonors = true))) {
-    star = "★";
-  } else star = "";
-  students.forEach((students) =>
-    console.log(
-      `[Grade ${students.grade}] ${students.name} - GPA: ${students.gpa} ${star}`,
-    ),
-  );
+  students.forEach(function (students) {
+    if (students.isHonors) {
+      console.log(
+        `[Grade ${students.grade}] ${students.name} - GPA: ${students.gpa} ★`,
+      );
+    } else
+      console.log(
+        `[Grade ${students.grade}] ${students.name} - GPA: ${students.gpa}`,
+      );
+  });
 }
-
 // Test your function — uncomment when ready:
 console.log("\n--- Problem 4 ---");
 printRoster(students);
@@ -170,13 +165,16 @@ const student = {
 
 function inspectObject(obj) {
   // TODO: use Object.entries() and .forEach() with destructuring
+  Object.entries(obj).forEach(([key, value]) => {
+    console.log(`${key} → ${value}`);
+  });
 }
 
 // Test your function — uncomment when ready:
-// console.log("\n--- Problem 5: student ---");
-// inspectObject(student);
-// console.log("\n--- Problem 5: movie ---");
-// inspectObject(movie);
+console.log("\n--- Problem 5: student ---");
+inspectObject(student);
+console.log("\n--- Problem 5: movie ---");
+inspectObject(movie);
 
 // =================================================================
 // PROBLEM 6 — Sum the Values
