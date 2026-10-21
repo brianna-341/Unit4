@@ -188,21 +188,21 @@ inspectObject(movie);
 // Expected output:
 //   sumValues({ math: 92, english: 85, history: 78, name: "Alex" }) → 255
 
-function sumValues(obj) {
-  // TODO: get the values with Object.values()
-  // TODO: loop through them, add only numbers to a total
-  // TODO: return the total
+// function sumValues(obj) {
+//   // TODO: get the values with Object.values()
+//   // TODO: loop through them, add only numbers to a total
+//   // TODO: return the total
 
-  Object.values(obj).forEach(([value]) => {
-    console.log();
-  });
-}
+//   Object.values(obj).forEach(([value]) => {
+//     console.log();
+//   });
+// }
 
 // Test your function — uncomment when ready:
-console.log("\n--- Problem 6 ---");
-const scores = { math: 92, english: 85, history: 78, name: "Alex" };
-console.log(sumValues(scores)); // → 255
-console.log(sumValues(student)); // → 11 + 3.8 = 14.8  (skips strings and booleans)
+// console.log("\n--- Problem 6 ---");
+// const scores = { math: 92, english: 85, history: 78, name: "Alex" };
+// console.log(sumValues(scores)); // → 255
+// console.log(sumValues(student)); // → 11 + 3.8 = 14.8  (skips strings and booleans)
 
 // =================================================================
 // STRETCH — Push a New Student

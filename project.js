@@ -53,25 +53,25 @@ const pets = [
   //birds
   {
     breed: "Blue-Headed Pionus",
-    size: "Medium",
+    breedgroups: "Pionus",
     category: "birds",
     price: 3750,
   },
   {
     breed: "Zebra Finch",
-    size: "Small",
+    breedgroups: "Finch",
     category: "birds",
     price: 50,
   },
   {
     breed: "Umbrella Cockatoo",
-    size: "Large",
+    breedgroups: "Cockatoo",
     category: "birds",
     price: 2760,
   },
   {
     breed: "Cockateel",
-    size: "Small",
+    size: "Cockateel",
     category: "birds",
     price: 275,
   },
@@ -79,29 +79,39 @@ const pets = [
   {
     breed: "Russian Dwarf Hamster",
     breedgroup: "Hamster",
-    category: "kittens",
-    price: 1507,
+    category: "Rodents",
+    price: 20,
   },
   {
-    breed: "",
-    breedgroup: "",
-    category: "kittens",
-    price: 1507,
+    breed: "Continteial Rabbit",
+    breedgroup: "Rabbit",
+    category: "Rodents",
+    price: 507,
   },
   {
-    breed: "Munchkin",
-    breedgroup: "",
-    category: "kittens",
-    price: 1507,
+    breed: "Fancy Mouse",
+    breedgroup: "Mouse",
+    category: "Rodents",
+    price: 10,
   },
   {
-    breed: "Munchkin",
-    breedgroup: "",
-    category: "kittens",
-    price: 1507,
+    breed: "Abyssinian Guinea Pig",
+    breedgroup: "Guinea Pig",
+    category: "Rodents",
+    price: 2378,
   },
 ];
-console.log(object.entries(pets.filter("puppies")));
+function buyPetFilter(breeds, targetBreed) {
+  return breeds.filter((breeds) => breeds.category === targetBreed);
+}
+console.log(buyPetFilter(pets, "Rodents"));
+
+cart = [];
+total = 0;
+function addToCarts(items, qty) {}
+
+console.log(addToCarts("Guinea Pig", 2));
+
 // function addToCart(item) {}
 
 // const cart = {Shoes:{name: "Shoes", price:80,qty:4}}
