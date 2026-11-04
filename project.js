@@ -109,8 +109,8 @@ console.log(buyPetFilter(pets, "Rodents"));
 cart = [];
 total = 0;
 function addToCarts(items, qty) {}
-
-console.log(addToCarts("Guinea Pig", 2));
+addToCarts("Abyssinian Guinea Pig", 2);
+console.log(cart);
 
 // function addToCart(item) {}
 
