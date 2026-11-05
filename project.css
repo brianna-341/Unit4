@@ -1,4 +1,58 @@
+html,
+body,
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body{
+    font-size: 20px;
+    background-color: #a3f1ff;
+}
 .box{
     width:5rem;
     height:5rem
+}
+.container{
+
+}
+.hero{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  color: white;
+  background-image:
+    linear-gradient(#ffffffcc, #91d3ffcc),
+    url("");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: hwb(0 100% 0%);
+  color: hwb(202 15% 8%);
+  width: 30rem;
+  height: 55rem;
+  /* margin is space between elements */
+  margin: 2.5rem 5rem;
+  border-radius: 0.8rem;
+  align-items: center;
+  text-color: hsl(189, 91%, 70%);
+}
+.card-content{
+    
+}
+.card-img{
+    width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 0.8rem;
 }
