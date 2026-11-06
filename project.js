@@ -106,11 +106,13 @@ function buyPetFilter(breeds, targetBreed) {
 }
 console.log(buyPetFilter(pets, "Rodents"));
 
-cart = [];
-total = 0;
-function addToCarts(items, qty) {}
-addToCarts("Abyssinian Guinea Pig", 2);
-console.log(cart);
+
+
+// cart = [];
+// total = 0;
+// function addToCarts(items, qty) {}
+// addToCarts("Abyssinian Guinea Pig", 2);
+// console.log(cart);
 
 // function addToCart(item) {}
 
