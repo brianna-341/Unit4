@@ -5,6 +5,7 @@ const pets = [
     breedgroup: "Terrier",
     category: "puppies",
     price: 693,
+    img: img("Abyssinian Guinea Pig.jpg"),
   },
   {
     breed: "Shih Tzu",
@@ -106,8 +107,27 @@ function buyPetFilter(breeds, targetBreed) {
 }
 console.log(buyPetFilter(pets, "Rodents"));
 
-
-
+function inject(pets) {
+  const conatiner = document.querySelector(".container");
+  conatiner.insertAdjacentHTML(
+    "beforeend",
+    `  <div class="card">
+    <h2 class="card-header">${pets.breed}</h2>
+    <img src="${pets.img}" alt="">
+    <p>filler filler</p>
+    </div>,`,
+  );
+}
+inject(pets[0]);
+const buttons = document.querySelectorAll("button");
+console.log(buttons);
+buttons.forEach((button) =>
+  button.addEventLiustener("click", function (event) {
+    console.log(event.target.closest(".card").getAttributes("data-item"));
+    //go find item ina array
+    //items[data-item]
+  }),
+);
 // cart = [];
 // total = 0;
 // function addToCarts(items, qty) {}

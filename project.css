@@ -1,17 +1,14 @@
 html,
 body,
-
-
 *{
     margin: 0;
     padding: 0;
     font-size: 10px;
     box-sizing:border-box;
- font-family: "Source Code Pro", monospace;
+    font-family: "Source Code Pro", monospace;
 }
 
 body{
-   
     background-color: hwb(191 78% 8%);
 }
 .box{
@@ -19,7 +16,10 @@ body{
     height:5rem
 }
 .container{
-
+display: flex;
+width: 85vw;
+flex-wrap: wrap;
+margin: 3rem auto;
 }
 .hero{
   display: flex;
@@ -45,14 +45,14 @@ body{
 .para{
   font-size: 30px
 }
-.btn{
+.hero-btn{
     height: 4rem;
     padding:0 1.6rem;
     background-color: hsl(216, 100%, 80%);
     font-size: 2rem;
     cursor:pointer;
     border-radius: 2rem;
-  
+    margin-top: 2rem;
 }
 .card {
   display: flex;
@@ -64,11 +64,9 @@ body{
   height: 40rem;
   margin: 2.5rem 5rem;
   border-radius: 0.8rem;
-  align-items: center;
-  
-  
+  align-items: center;  
 }
-.card-title{
+.card-header{
   font-size: 30px;
   margin-top: 3rem;
 }
@@ -91,5 +89,4 @@ body{
     cursor:pointer;
     border-radius: 1rem;
     margin-bottom: 3rem
-  
 }
