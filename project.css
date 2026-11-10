@@ -11,15 +11,12 @@ body,
 body{
     background-color: hwb(191 78% 8%);
 }
-.box{
-    width:5rem;
-    height:5rem
-}
-.container{
-display: flex;
-width: 85vw;
-flex-wrap: wrap;
-margin: 3rem auto;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .hero{
   display: flex;
