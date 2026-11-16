@@ -5,7 +5,7 @@ const pets = [
     breedgroup: "Terrier",
     category: "puppies",
     price: 693,
-    img: "img/images/Abyssinian Guinea Pig.jpg",
+    img: "img/1.jpg",
   },
   {
     breed: "Shih Tzu",
@@ -107,20 +107,20 @@ function buyPetFilter(breeds, targetBreed) {
 }
 console.log(buyPetFilter(pets, "Rodents"));
 
-function inject(pets) {
+function inject(pet) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
     "beforeend",
     `  <div class="card">
-    <h2 class="card-header">${pets.breed}</h2>
-    <img src="${pets.img}" alt="">
-    <p class= "card-price>${pets.price}</p>
-    <button class="card-btn"></button>
+    <h2 class="card-header">${pet.breed}</h2>
+    <img class="card-img src="${pet.img}" alt="" />
+    <p class= "card-price>${pet.price}</p>
+    <button class="card-btn">"Click Me"</button>
     </div>,`,
   );
 }
 pets.forEach((pet) => {
-  inject(pet[0]);
+  inject(pet);
 });
 
 const buttons = document.querySelectorAll("button");

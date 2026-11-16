@@ -61,7 +61,8 @@ body{
   height: 40rem;
   margin: 2.5rem 5rem;
   border-radius: 0.8rem;
-  align-items: center;  
+  align-items: center; 
+  
 }
 .card-header{
   font-size: 30px;
@@ -77,6 +78,8 @@ body{
   object-fit: cover;
   padding: 20px;
   border-radius: 4rem;
+
+  
 }
 .card-btn{
     height: 4rem;
