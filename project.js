@@ -12,18 +12,21 @@ const pets = [
     breedgroup: "Toy",
     category: "puppies",
     price: 1091,
+    img: "img/2.jpg",
   },
   {
     breed: "Cheweenie",
     breedgroup: "Mixes",
     category: "puppies",
     price: 477,
+    img: "img/3.jpg",
   },
   {
     breed: "Basset Hound",
     breedgroup: "Sporting",
     category: "puppies",
     price: 1307,
+    img: "img/4.jpg",
   },
   //cats
   {
@@ -31,18 +34,21 @@ const pets = [
     coating: "Long & Short",
     category: "kittens",
     price: 1507,
+    img: "img/5.jpg",
   },
   {
     breed: "Ragdoll",
     coating: "Semi-Longhaired",
     category: "kittens",
     price: 2520,
+    img: "img/6.jpg",
   },
   {
     breed: "Siamese",
     coating: "Short Haired",
     category: "kittens",
     price: 670,
+    img: "img/7.jpg",
   },
 
   {
@@ -50,31 +56,36 @@ const pets = [
     breedgroup: "Long Haired",
     category: "birds",
     price: 1507,
+    img: "img/8.jpg",
   },
   //birds
   {
-    breed: "Blue-Headed Pionus",
+    breed: "Blue Headed Pionus",
     breedgroups: "Pionus",
     category: "birds",
     price: 3750,
+    img: "img/9.jpg",
   },
   {
     breed: "Zebra Finch",
     breedgroups: "Finch",
     category: "birds",
     price: 50,
+    img: "img/10.jpg",
   },
   {
     breed: "Umbrella Cockatoo",
     breedgroups: "Cockatoo",
     category: "birds",
     price: 2760,
+    img: "img/11.jpg",
   },
   {
     breed: "Cockateel",
     size: "Cockateel",
     category: "birds",
     price: 275,
+    img: "img/12.jpg",
   },
   //Rodents
   {
@@ -82,24 +93,28 @@ const pets = [
     breedgroup: "Hamster",
     category: "Rodents",
     price: 20,
+    img: "img/13.jpg",
   },
   {
     breed: "Continteial Rabbit",
     breedgroup: "Rabbit",
     category: "Rodents",
     price: 507,
+    img: "img/14.jpg",
   },
   {
     breed: "Fancy Mouse",
     breedgroup: "Mouse",
     category: "Rodents",
     price: 10,
+    img: "img/15.jpg",
   },
   {
     breed: "Abyssinian Guinea Pig",
     breedgroup: "Guinea Pig",
     category: "Rodents",
     price: 2378,
+    img: "img/16.jpg",
   },
 ];
 function buyPetFilter(breeds, targetBreed) {
@@ -112,26 +127,28 @@ function inject(pet) {
   container.insertAdjacentHTML(
     "beforeend",
     `  <div class="card">
+    <div class="card-content">
     <h2 class="card-header">${pet.breed}</h2>
-    <img class="card-img src="${pet.img}" alt="" />
-    <p class= "card-price>${pet.price}</p>
+    <img class="card-img" src="${pet.img}" alt="" />
+    <p class= "card-price">$${pet.price}</p>
     <button class="card-btn">"Click Me"</button>
-    </div>,`,
+    </div>
+    </div>`,
   );
 }
 pets.forEach((pet) => {
   inject(pet);
 });
 
-const buttons = document.querySelectorAll("button");
-console.log(buttons);
-buttons.forEach((button) =>
-  button.addEventLiustener("click", function (event) {
-    console.log(event.target.closest(".card").getAttributes("data-item"));
-    //go find item ina array
-    //items[data-item]
-  }),
-);
+// const buttons = document.querySelectorAll("button");
+// console.log(buttons);
+// buttons.forEach((button) =>
+//   button.addEventLiustener("click", function (event) {
+//     console.log(event.target.closest(".card").getAttributes("data-item"));
+//     //go find item ina array
+//     //items[data-item]
+//   }),
+// );
 // cart = [];
 // total = 0;
 // function addToCarts(items, qty) {}
