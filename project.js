@@ -85,7 +85,7 @@ const pets = [
     size: "Cockateel",
     category: "birds",
     price: 275,
-    img: "img/12.jpg",
+    img: "img/a.jpg",
   },
   //Rodents
   {
@@ -131,7 +131,7 @@ function inject(pet) {
     <h2 class="card-header">${pet.breed}</h2>
     <img class="card-img" src="${pet.img}" alt="" />
     <p class= "card-price">$${pet.price}</p>
-    <button class="card-btn">"Click Me"</button>
+    <button class="card-btn">Add to Cart</button>
     </div>
     </div>`,
   );
@@ -140,15 +140,20 @@ pets.forEach((pet) => {
   inject(pet);
 });
 
-// const buttons = document.querySelectorAll("button");
-// console.log(buttons);
-// buttons.forEach((button) =>
-//   button.addEventLiustener("click", function (event) {
-//     console.log(event.target.closest(".card").getAttributes("data-item"));
-//     //go find item ina array
-//     //items[data-item]
-//   }),
-// );
+const buttons = document.querySelectorAll("button");
+console.log(buttons);
+buttons.forEach((button) =>
+  button.addEventLiustener("click", function (event) {
+    console.log(event.target.closest(".card").getAttributes("breed"));
+    //go find item ina array
+    //items[data-item]
+  }),
+);
+
+function showCart() {
+  document.querySelector(".pop").style.display = "flex";
+}
+showCart();
 // cart = [];
 // total = 0;
 // function addToCarts(items, qty) {}
