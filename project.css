@@ -71,7 +71,7 @@ body{
   font-weight: 700;
   width: 30rem;
   
- height: 45srem;
+ height: 45rem;
 }
 .card-header{
   font-size: 30px;
@@ -100,25 +100,16 @@ body{
     border-radius: 1rem;
     margin-bottom: 3rem
 }
-.pop{
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-.pop-text {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
+
+ .pop {
+  display: none;
+  width: 500px;
+  height: 500px;
   position: absolute;
-  z-index: 1;
-  bottom: 125%;
+  top: 50%;
   left: 50%;
-  margin-left: -80px;
+  background-color: red;
+  transform: translate(-50%, -50%);
+
 }
-.popup-show {
-  visibility: visible;
-}
+

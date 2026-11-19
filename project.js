@@ -126,7 +126,7 @@ function inject(pet) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
     "beforeend",
-    `  <div class="card">
+    `  <div class="card" data-item=${pet.breedgroup}>
     <div class="card-content">
     <h2 class="card-header">${pet.breed}</h2>
     <img class="card-img" src="${pet.img}" alt="" />
@@ -140,11 +140,12 @@ pets.forEach((pet) => {
   inject(pet);
 });
 
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll("card-button");
 console.log(buttons);
+
 buttons.forEach((button) =>
-  button.addEventLiustener("click", function (event) {
-    console.log(event.target.closest(".card").getAttributes("breed"));
+  button.addEventListener("click", function (event) {
+    console.log(event.target.closest(".card").getAttributes("data-item"));
     //go find item ina array
     //items[data-item]
   }),
@@ -154,6 +155,7 @@ function showCart() {
   document.querySelector(".pop").style.display = "flex";
 }
 showCart();
+
 // cart = [];
 // total = 0;
 // function addToCarts(items, qty) {}
@@ -161,7 +163,6 @@ showCart();
 // console.log(cart);
 
 // function addToCart(item) {}
-
 // const cart = {Shoes:{name: "Shoes", price:80,qty:4}}
 // function addToCart(item){
 //   if (cart[item.name]){
