@@ -140,22 +140,27 @@ pets.forEach((pet) => {
   inject(pet);
 });
 
-const buttons = document.querySelectorAll("card-button");
-console.log(buttons);
+// const buttons = document.querySelectorAll("card-button");
+// console.log(buttons);
 
-buttons.forEach((button) =>
-  button.addEventListener("click", function (event) {
-    console.log(event.target.closest(".card").getAttributes("data-item"));
-    //go find item ina array
-    //items[data-item]
-  }),
-);
+// buttons.forEach((button) =>
+//   button.addEventListener("click", function (event) {
+//     console.log(event.target.closest(".card").getAttributes("data-item"));
+//     //go find item ina array
+//     //items[data-item]
+//   }),
+// );
 
-function showCart() {
-  document.querySelector(".pop").style.display = "flex";
-}
-showCart();
+// function showCart() {
+//   document.querySelector(".pop").style.display = "flex";
+// }
+// showCart();
 
+(function () {
+  $("#cart").on("click", function () {
+    $(".shopping-cart").fadeToggle("fast");
+  });
+})();
 // cart = [];
 // total = 0;
 // function addToCarts(items, qty) {}
