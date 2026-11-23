@@ -14,19 +14,19 @@
       <div class="hero-content">
         <h1 class ="head1">Petstore</h1>
         <p class="para">many many pets 4 sale</p>
-        <button href="#popup" class="hero-btn">Cart</button>
-        <button href="#filter" class="hero-btn">Filter</button>
+        
+       <button onclick="togglePopup()" class = "hero-btn">Cart</button>
+
+  <div id="popup" class="popup">
+  <div class="pop-content">
+    <h2>Popup Title</h2>
+    <p>This is a simple popup box.</p>
+    <button onclick="togglePopup()">Close</button></div>
+        
       </div>
     </section>
 </a>
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <h2>Popup Title</h2>
-    <p>This is a simple popup box.</p>
-    <a href="#" style="display:inline-block; margin-top:10px; padding:5px 10px; background:#dc3545; color:#fff; text-decoration:none; border-radius:3px;">
-      Close
-    </a>
-  </div>
+
 </div>
 
      <!--hero end-->

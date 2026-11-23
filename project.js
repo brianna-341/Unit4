@@ -155,7 +155,9 @@ pets.forEach((pet) => {
 //   document.querySelector(".pop").style.display = "flex";
 // }
 // showCart();
-
+function togglePopup() {
+  document.getElementById("popup").classList.toggle("show");
+}
 (function () {
   $("#cart").on("click", function () {
     $(".shopping-cart").fadeToggle("fast");
