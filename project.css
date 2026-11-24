@@ -3,7 +3,6 @@ body,
 *{
     margin: 0;
     padding: 0;
-    font-size: 10px;
     box-sizing:border-box;
     font-family: "Source Code Pro", monospace;
 }
@@ -48,6 +47,33 @@ body{
    
     
 }
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  height: 60vh; width: 60vh;
+  transform: translate(-50%, -50%);
+  background: hwb(0 100% 0%);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+   font-size: 3rem;
+   
+}
+.popup.show {
+  display: block;
+}
+.pop-content {
+  background: lab(18.54% -7.77 -9.77);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 55vh;
+word-wrap: break-word;
+  
+}
 .container {
   display: flex;
   flex-direction: row;
@@ -61,21 +87,21 @@ body{
   justify-content: space-around;
   background-color: oklab(98.066% 0.00204 0.00052);
   color: hwb(202 15% 8%);
-  width: 40rem;
-  height: 40rem;
-  margin: 2.5rem 5rem;
-  border-radius: 0.8rem;
+  width: 25rem; /*card width +height*/
+  height: 25rem;
+  margin: 2.5rem 3rem; /*empty space btw cards*/
+  border-radius: 0.8rem; 
   align-items: center; 
-  padding: 10px;
-  border:none,
+  padding: 10px; /*card top height of content*/
+  border:none;
+  font-size: 2rem;
 }
 .card-content {
   text-align: center;
   font-size: 1.8rem;
   font-weight: 700;
-  width: 30rem;
-  
- height: 45rem;
+  width: 100%;
+ height: 100%;
 }
 .card-header{
   font-size: 30px;
@@ -86,45 +112,25 @@ body{
 
 .card-price{
   font-size: 20px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 .card-img{
-  width: 30rem;
-  height: 20rem;
+  width: 20rem;
+  height: 15rem;
   object-fit: cover;
   padding: 10px;
   border-radius: 4rem;
 }
 .card-btn{
-    height: 4rem;
-    padding:0 1.6rem;
+    height: 2.5rem;
+    padding:0.2rem;
     background-color: hsl(216, 100%, 80%);
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor:pointer;
-    border-radius: 2rem;
-    margin-top: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 
-.popup {
-  display: none;
-  position: fixed;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.popup.show {
-  display: block;
-}
-.pop-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
+
 

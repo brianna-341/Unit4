@@ -140,16 +140,16 @@ pets.forEach((pet) => {
   inject(pet);
 });
 
-// const buttons = document.querySelectorAll("card-button");
-// console.log(buttons);
+const buttons = document.querySelectorAll("card-button");
+console.log(buttons);
 
-// buttons.forEach((button) =>
-//   button.addEventListener("click", function (event) {
-//     console.log(event.target.closest(".card").getAttributes("data-item"));
-//     //go find item ina array
-//     //items[data-item]
-//   }),
-// );
+buttons.forEach((button) =>
+  button.addEventListener("click", function (event) {
+    console.log(event.target.closest(".card").getAttributes("data-item"));
+    //go find item ina array
+    //items[data-item]
+  }),
+);
 
 // function showCart() {
 //   document.querySelector(".pop").style.display = "flex";
@@ -169,13 +169,13 @@ function togglePopup() {
 // addToCarts("Abyssinian Guinea Pig", 2);
 // console.log(cart);
 
-// function addToCart(item) {}
-// const cart = {Shoes:{name: "Shoes", price:80,qty:4}}
-// function addToCart(item){
-//   if (cart[item.name]){
-//     cart[item.name].qty++
-//   }else {
-//     cart[item.name] = item
-//   }
-// }
-// addToCart({name:"watch",price:80,qty:1})
+const cart = {};
+function addToCart(pet) {
+  S;
+  if (cart[pet.name]) {
+    cart[pet.name].qty++;
+  } else {
+    cart[pet.name] = pet;
+  }
+}
+addToCart(pets);
