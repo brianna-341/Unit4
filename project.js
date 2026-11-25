@@ -131,7 +131,7 @@ function inject(pet) {
     <h2 class="card-header">${pet.breed}</h2>
     <img class="card-img" src="${pet.img}" alt="" />
     <p class= "card-price">$${pet.price}</p>
-    <button class="card-btn">Add to Cart</button>
+    <button onclick="addToCart(${pet.name},${pet.price})" class="card-btn">Add to Cart</button>
     </div>
     </div>`,
   );
@@ -169,9 +169,8 @@ function togglePopup() {
 // addToCarts("Abyssinian Guinea Pig", 2);
 // console.log(cart);
 
-const cart = {};
+const cart = 0;
 function addToCart(pet) {
-  S;
   if (cart[pet.name]) {
     cart[pet.name].qty++;
   } else {
